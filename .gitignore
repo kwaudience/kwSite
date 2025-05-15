@@ -1,0 +1,61 @@
+# Laravel
+/vendor
+/node_modules
+/public/storage
+/storage/*.key
+.env
+.env.*.backup
+.phpunit.result.cache
+
+# Laravel Cache and Logs
+/storage/logs
+/storage/framework/cache/*
+/storage/framework/sessions/*
+/storage/framework/views/*
+
+# Composer
+composer.lock
+
+# NPM & Yarn
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# IDEs
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+
+# OS Files
+.DS_Store
+Thumbs.db
+
+# Git
+.git/
+
+# PHPUnit
+.phpunit.cache/
+
+# Laravel Sail (Docker)
+docker-compose.override.yml
+
+# Laravel Telescope
+/telescope/requests.sqlite
+
+# Laravel Horizon
+/horizon/stats.sqlite
+
+# Build tools
+/public/hot
+/public/mix-manifest.json
+/public/js/*.map
+/public/css/*.map
+
+# Jetstream / Livewire / Inertia temp files
+/livewire-tmp/
+
+# Others
+*.log
+*.bak
+*.tmp

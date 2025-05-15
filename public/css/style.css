@@ -1,0 +1,457 @@
+/* ========== RESET & BASE ========== */
+body, html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #ffffff;
+}
+
+html {
+  scroll-behavior: smooth; /* Effet de scroll fluide */
+}
+
+* {
+  font-family: 'Roboto', sans-serif;
+}
+
+body, h1, h2, h3, h4, h5, h6, p, a, button, input, textarea {
+  font-family: 'Roboto', sans-serif !important;
+}
+
+
+/* ========== SECTION HEADER ========== */
+/* En-tête principal avec logo + bouton */
+.site-header {
+  width: 100%;
+  background-color: #ffffff;
+  height: 100px;
+  color: white;
+  padding: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Logo du site */
+.site-logo {
+  height: 80px;
+  width: 100%;
+  max-width: 394px;
+}
+
+/* Bouton "Espace Client" */
+.btn-espace-client {
+  color: black;
+  border: 2px solid black;
+  background-color: transparent;
+  transition: all 0.3s ease;
+}
+
+/* Effet au survol du bouton */
+.btn-espace-client:hover,
+.btn-espace-client:focus {
+  color: white;
+  background-color: #FF914C;
+  border-color: #FF914C;
+}
+
+/* ========== SECTION NAVBAR ========== */
+/* Barre de navigation principale */
+.site-navbar {
+  width: 100%;
+  background-color: #00033310;
+  padding: 10px 20px;
+  display: center; /* Utilisation de flexbox */
+  justify-content: center; /* Centre la navbar horizontalement */
+  align-items: center; /* Centre la navbar verticalement (optionnel si nécessaire) */
+}
+
+/* Liste des liens de navigation */
+.nav-list {
+  list-style: none;
+  margin: 0;
+  padding:50%;
+  display: center; /* Utilisation de flexbox pour la liste */
+  justify-content: center; /* Centre les éléments de la liste */
+  align-items: center; /* Centrage vertical des éléments */
+}
+
+/* Éléments de menu */
+.nav-item {
+  margin: 0 15px; /* Espacement entre chaque élément du menu */
+}
+
+/* Liens de navigation */
+.nav-link {
+  color: black !important; /* Couleur du texte par défaut */
+  font-size: 16px;
+  font-weight: bold;
+  padding: 10px 15px;
+  text-decoration: none; /* Supprime le soulignement des liens */
+  transition: color 0.3s ease;
+  position: relative;
+  border-radius: 5px; /* Bords arrondis pour chaque lien */
+}
+
+/* Au survol, changement de couleur */
+.nav-link:hover {
+  color: #df7f12 !important; /* Couleur du texte au survol */
+  background-color: #c7c7c741; /* Légère ombre en fond au survol */
+}
+
+/* Onglet actif (la page actuelle) */
+.nav-link.active {
+  color: black !important; /* Texte actif reste noir */
+  font-weight: bold;
+}
+
+/* Petit effet de soulignement (actuellement transparent pour l'onglet actif) */
+.nav-link.active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 100%;
+  height: 2px;
+  background: rgba(120, 120, 120, 0);
+}
+
+
+/* ========== MENU DÉROULANT ========== */
+/* Affiche le menu au survol */
+.nav-item.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+/* Conteneur du menu déroulant */
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+/* Liens dans le dropdown */
+.dropdown-item {
+  padding: 10px;
+  color: black;
+  text-decoration: none;
+}
+
+/* Survol d'un lien dropdown */
+.dropdown-item:hover {
+  background-color: #f1f1f1;
+}
+/* ==== EN-TÊTE DU SITE (HEADER) ==== */
+
+/* Logo du header */
+.header img {
+    height: 50px; /* Taille du logo dans l’en-tête */
+}
+
+/* Conteneur des liens de navigation (ex : Accueil, Services...) */
+.nav-links {
+    display: flex;           /* Affiche les liens en ligne */
+    gap: 20px;               /* Espace entre les liens */
+}
+
+/* Style des liens de navigation */
+.nav-links a {
+    color: white;            /* Couleur du texte (par défaut) */
+    text-decoration: none;   /* Supprime le soulignement */
+    font-size: 16px;         /* Taille du texte */
+    font-weight: bold;       /* Texte en gras */
+    transition: color 0.3s;  /* Animation douce pour le changement de couleur */
+}
+
+/* Changement de couleur au survol */
+.nav-links a:hover {
+    color: orange;           /* Couleur quand la souris passe dessus */
+}
+/* ==== PIED DE PAGE (FOOTER) ==== */
+.footer {
+  background: #000;              /* Fond noir élégant */
+  color: white;                  /* Texte en blanc pour contraste */
+  padding: 40px 20px;            /* Espace intérieur haut/bas + côtés */
+  text-align: center;
+}
+
+/* Contenu du footer (sections côte à côte ou en colonne) */
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;               /* Permet l’adaptation mobile */
+  justify-content: space-around;
+  max-width: 1100px;
+  margin: auto;
+}
+
+/* Chaque bloc/section du footer */
+.footer-section {
+  flex: 1;
+  min-width: 200px;
+  margin: 15px;
+}
+
+/* Titres dans le footer */
+.footer-section h2 {
+  font-size: 1.5rem;
+  color: #FF914C;                /* Couleur orange qui POP ✨ */
+  margin-bottom: 10px;
+}
+
+/* Listes de liens */
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+/* Chaque élément de la liste */
+.footer-section ul li {
+  margin: 8px 0;
+}
+
+/* Style des liens */
+.footer-section ul li a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-section ul li a:hover {
+  color: #FF914C;                /* Couleur orange au survol, t’as capté le mood */
+}
+
+/* Bandeau du bas du footer */
+.footer-bottom {
+  margin-top: 20px;
+  padding-top: 10px;
+  font-size: 0.9rem;
+  border-top: 1px solid #333;    /* Petite ligne discrète séparatrice */
+}
+/* ==== BOUTON ESPACE CLIENT ==== */
+.button-80 {
+  background: transparent;       /* Fond transparent pour un look chic */
+  border: 2px solid black;       /* Bordure noire élégante */
+  color: black;                  /* Texte noir classique */
+  font-weight: bold;             /* Texte bien visible */
+  padding: 12px 24px;            /* Espace autour du texte pour le confort visuel */
+  border-radius: 25%;            /* Coins très arrondis pour un effet "pilule" original */
+  transition: all 0.3s ease;     /* Douce transition quand on survole */
+  width: 100%;                   /* Prend toute la largeur dispo (dans son conteneur) */
+}
+
+/*STYLE DU BOUTON AU SURVOL ==== */
+.button-80:hover {
+  background:  linear-gradient(to right, #e65c00, #ff8000);             /* Fond noir quand on passe la souris */
+  color: white;                  /* Texte blanc pour contraste classe */
+  border-color: white;           /* Bordure blanche assortie */
+  font-weight: bold;             /* Toujours bien lisible */
+  padding: 12px 24px;            /* On garde les mêmes dimensions */
+  border-radius: 25%;            /* Même forme arrondie */
+  transition: all 0.3s ease;     /* Douce animation */
+  width: 100%;                   /* Toujours full width */
+}
+/* ==== FLÈCHE VERS LE BAS ==== */
+.scroll-down {
+  position: fixed;             /* Collée à l'écran, peu importe le scroll */
+  bottom: 20px;                /* Décalée de 20px depuis le bas de la page */
+  right: 70px;                 /* Un peu plus à gauche pour ne pas gêner la flèche "Back to Top" */
+  background-color: black;    /* Fond noir chic */
+  color: white;                /* Icône blanche (flèche) pour contraste */
+  font-size: 30px;             /* Taille de l’icône de flèche */
+  border: none;                /* No border drama ici */
+  border-radius: 50%;         /* Forme ronde comme un bouton stylé */
+  cursor: pointer;            /* Curseur "main" pour montrer que c'est cliquable */
+  z-index: 999;               /* Toujours au-dessus du reste */
+  width: 50px;                /* Largeur fixe */
+  height: 50px;               /* Hauteur fixe */
+  display: flex;              /* Flexbox pour centrer la flèche */
+  align-items: center;        /* Verticalement centré */
+  justify-content: center;    /* Horizontalement centré */
+  transition: transform 0.3s ease; /* Douce animation au hover */
+}
+
+.scroll-down:hover {
+  transform: translateY(-5px); /* Quand on survole : effet de flottement vers le haut */
+}
+
+/* ==== FLÈCHE VERS LE HAUT (BACK TO TOP) ==== */
+#backToTop {
+  position: fixed;             /* Toujours visible peu importe où on scroll */
+  bottom: 20px;                /* À 20px du bas */
+  right: 20px;                 /* Coin droit */
+  background-color: #FF914C;   /* Fond orange pétillant */
+  color: white;                /* Flèche blanche, encore une fois pour contraste */
+  font-size: 30px;             /* Taille visible de l’icône */
+  border: none;                /* Toujours no border drama */
+  border-radius: 50%;         /* Bouton bien rond, cutie style */
+  cursor: pointer;            /* Curseur main pour action */
+  z-index: 999;               /* Toujours par-dessus tout */
+  width: 50px;                 /* Taille égale pour l’harmonie */
+  height: 50px;                /* Même chose */
+  display: flex;               /* Centrage flex */
+  align-items: center;        /* Verticalement */
+  justify-content: center;    /* Horizontalement */
+  transition: transform 0.3s ease; /* Petite animation glam quand on survole */
+}
+
+/* Tu peux ajouter un effet hover si tu veux sur #backToTop aussi */
+#backToTop:hover {
+  transform: translateY(-5px); /* Même animation sexy au survol */
+}
+/* ============================
+ ✅ MENU HAMBURGER FIXÉ – ÉLÉGANT ET DISCRET
+============================ */
+
+/* ==== Conteneur principal du menu hamburger ==== */
+.hamburger-menu {
+  position: absolute;            /* Positionné par rapport à son parent (ex: card-2) */
+  top: 10px;                     /* Petit décalage depuis le haut */
+  right: 10px;                   /* Collé à droite de la card */
+  background-color: rgba(51, 51, 51, 0); /* Fond transparent (mais tu peux le rendre visible si tu veux) */
+  color: white;                  /* Icônes ou texte en blanc */
+  padding: 10px;                 /* Un petit coussin pour le confort visuel */
+  display: flex;                 /* Flexbox pour organiser les éléments */
+  justify-content: flex-end;     /* Contenu aligné à droite dans le menu */
+  align-items: center;           /* Aligné verticalement au centre */
+  z-index: 1000;                 /* Passe AU-DESSUS de tout, parce que diva ne se cache pas */
+}
+
+/* ==== Bouton hamburger lui-même ==== */
+#hamburger-button {
+  display: flex;                 /* On active Flexbox pour aligner les barres */
+  flex-direction: column;       /* On empile les barres verticalement */
+  justify-content: space-around;/* Espace régulier entre chaque barre */
+  width: 30px;                  /* Largeur du bouton */
+  height: 25px;                 /* Hauteur du bouton */
+  background: transparent;       /* Pas de fond, on veut du minimalisme */
+  border: none;                 /* Pas de bordure non plus, on reste sleek */
+  cursor: pointer;              /* Curseur main, évidemment c'est cliquable */
+  padding: 0;                   /* On évite les marges cheloues */
+}
+
+/* ==== Barres du hamburger (3 traits classiques) ==== */
+.bar {
+  width: 100%;                  /* Chaque barre prend toute la largeur du bouton */
+  height: 3px;                  /* Épaisseur de la barre */
+  background-color: white;      /* Couleur des barres */
+  transition: 0.4s;             /* Smooth animation si on les transforme (ex: en X) */
+  border-radius: 5px;           /* Bords arrondis pour un look plus soft */
+}
+
+/* Mobile - Menu Hamburger */
+.hamburger-menu-mobile {
+    display: none; /* Caché par défaut */
+}
+
+/* Icône hamburger */
+#hamburger-button-mobile {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 30px;
+    height: 25px;
+}
+
+.bar {
+    width: 30px;
+    height: 5px;
+    background-color: #fff;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Contenu du menu */
+.menu-content-mobile {
+    display: none; /* Cacher le menu par défaut */
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #333;
+    color: white;
+    z-index: 1000;
+    height: 100vh;
+    padding: 20px;
+    text-align: center;
+}
+
+.menu-content-mobile.open {
+    display: block; /* Afficher le menu */
+}
+
+.menu-content-mobile ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Style des éléments du menu */
+.menu-content-mobile ul li {
+    padding: 15px;
+}
+
+.menu-content-mobile ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+}
+
+/* Sous-menu services */
+.dropdown-menu-mobile {
+    display: none;
+    list-style-type: none;
+    padding: 0;
+    background-color: #444;
+}
+
+.dropdown-menu-mobile li {
+    padding: 10px 0;
+}
+
+.dropdown-menu-mobile li a {
+    font-size: 16px;
+    text-decoration: none;
+    color: white;
+}
+
+.dropdown-menu-mobile.open {
+    display: block;
+}
+
+.dropdown-btn-mobile {
+    font-size: 18px;
+    color: white;
+    cursor: pointer;
+    padding: 10px;
+    background: none;
+    border: none;
+}
+
+/* Bouton de fermeture du menu */
+.close-button-mobile {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+    .hamburger-menu-mobile {
+        display: block; /* Afficher sur mobile */
+    }
+}
+
+
+
+

@@ -1,0 +1,79 @@
+.main-imageGA,
+.main-imageSC,
+.main-imageF,
+.main-imagedW,
+.main-imageIW,
+.main-imageA,
+.main-imageD,
+.main-imageIF,
+.main-imageGP {
+    position: relative;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 500px;
+    overflow: hidden;
+}
+
+/* Optionnel : centre l'image pour celles qui le nécessitent */
+.main-imageGA,
+.main-imageSC,
+.main-imageF,
+.main-imageA {
+    background-position: center;
+}
+
+/* Spécifiques à chaque image */
+.main-imageGA    { background-image: url(../images/security.jpg); }
+.main-imageSC    { background-image: url(../images/software.jpg); }
+.main-imageF     { background-image: url(../images/cyber-security-1805632_1280.png); }
+.main-imagedW    { background-image: url(../images/programming.png); }
+.main-imageIW    { background-image: url(../images/ux-788002_1280.jpg); }
+.main-imageA     { background-image: url(../images/room-8779510_640.png); }
+.main-imageD     { background-image: url(../images/law-8722596_1280.jpg); }
+.main-imageIF    { background-image: url(../images/industrial-designers-working-3d-model.jpg); }
+.main-imageGP    { background-image: url(../images/gpi.jpeg); }
+
+.container{
+    position: relative;
+    top: 40%;
+    left: 0%;
+    /* transform: translate(-50% -50%); */
+    text-align: center;
+    color: white;
+    font-weight: 700;
+    /* text-transform: uppercase; */
+}
+
+.container h1{
+    /* margin: 0;
+    font-size: 70px; */
+    color: #ff6600;
+    text-transform: uppercase;
+    font-size: 48px;
+    line-height: 1.2;
+    word-wrap: break-word;
+}
+
+.container h1 span{
+    border: 6px solid white;
+    padding: 6px 14px;
+    display: inline-block;
+}
+
+.cen{
+    margin: 20px;
+    display: block;
+    font-size: 26px;
+}
+
+@media (max-width: 768px) {
+    .container h1 {
+      font-size: 28px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .container h1 {
+      font-size: 22px;
+    }
+  }
